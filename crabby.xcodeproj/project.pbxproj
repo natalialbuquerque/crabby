@@ -1,0 +1,368 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EC2E06AD290C3F0000318346 /* crabbyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2E06AC290C3F0000318346 /* crabbyApp.swift */; };
+		EC2E06AF290C3F0000318346 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2E06AE290C3F0000318346 /* ContentView.swift */; };
+		EC2E06B4290C3F0100318346 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC2E06B3290C3F0100318346 /* Preview Assets.xcassets */; };
+		EC2E06BB290C3F5B00318346 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2E06BA290C3F5B00318346 /* GameScene.swift */; };
+		EC2E06BF290C420F00318346 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2E06BE290C420F00318346 /* GameView.swift */; };
+		ECAE2627290C7D5200B27052 /* assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECAE2626290C7D5200B27052 /* assets.xcassets */; };
+		ECAE262B290C8B6500B27052 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECAE2629290C8B6500B27052 /* Assets.xcassets */; };
+		ECAE2631290C940400B27052 /* bolhas.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECAE2630290C940400B27052 /* bolhas.swift */; };
+		ECAE2635290D3FDE00B27052 /* bubbleSound.wav in Resources */ = {isa = PBXBuildFile; fileRef = ECAE2634290D3FDE00B27052 /* bubbleSound.wav */; };
+		ECAE2637290D586300B27052 /* BubbleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECAE2636290D586300B27052 /* BubbleModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		EC2E06A9290C3F0000318346 /* crabby.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = crabby.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC2E06AC290C3F0000318346 /* crabbyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = crabbyApp.swift; sourceTree = "<group>"; };
+		EC2E06AE290C3F0000318346 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		EC2E06B3290C3F0100318346 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		EC2E06BA290C3F5B00318346 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		EC2E06BE290C420F00318346 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
+		ECAE2626290C7D5200B27052 /* assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = assets.xcassets; sourceTree = "<group>"; };
+		ECAE2629290C8B6500B27052 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		ECAE2630290C940400B27052 /* bolhas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bolhas.swift; sourceTree = "<group>"; };
+		ECAE2634290D3FDE00B27052 /* bubbleSound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = bubbleSound.wav; sourceTree = "<group>"; };
+		ECAE2636290D586300B27052 /* BubbleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleModel.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EC2E06A6290C3F0000318346 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EC2E06A0290C3F0000318346 = {
+			isa = PBXGroup;
+			children = (
+				ECAE2630290C940400B27052 /* bolhas.swift */,
+				ECAE2629290C8B6500B27052 /* Assets.xcassets */,
+				EC2E06AB290C3F0000318346 /* crabby */,
+				EC2E06AA290C3F0000318346 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EC2E06AA290C3F0000318346 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EC2E06A9290C3F0000318346 /* crabby.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EC2E06AB290C3F0000318346 /* crabby */ = {
+			isa = PBXGroup;
+			children = (
+				EC2E06BE290C420F00318346 /* GameView.swift */,
+				EC2E06BA290C3F5B00318346 /* GameScene.swift */,
+				EC2E06AC290C3F0000318346 /* crabbyApp.swift */,
+				EC2E06AE290C3F0000318346 /* ContentView.swift */,
+				ECAE2636290D586300B27052 /* BubbleModel.swift */,
+				ECAE2634290D3FDE00B27052 /* bubbleSound.wav */,
+				ECAE2626290C7D5200B27052 /* assets.xcassets */,
+				EC2E06B2290C3F0100318346 /* Preview Content */,
+			);
+			path = crabby;
+			sourceTree = "<group>";
+		};
+		EC2E06B2290C3F0100318346 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				EC2E06B3290C3F0100318346 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EC2E06A8290C3F0000318346 /* crabby */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EC2E06B7290C3F0100318346 /* Build configuration list for PBXNativeTarget "crabby" */;
+			buildPhases = (
+				EC2E06A5290C3F0000318346 /* Sources */,
+				EC2E06A6290C3F0000318346 /* Frameworks */,
+				EC2E06A7290C3F0000318346 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = crabby;
+			productName = crabby;
+			productReference = EC2E06A9290C3F0000318346 /* crabby.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EC2E06A1290C3F0000318346 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1400;
+				LastUpgradeCheck = 1400;
+				TargetAttributes = {
+					EC2E06A8290C3F0000318346 = {
+						CreatedOnToolsVersion = 14.0;
+					};
+				};
+			};
+			buildConfigurationList = EC2E06A4290C3F0000318346 /* Build configuration list for PBXProject "crabby" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EC2E06A0290C3F0000318346;
+			productRefGroup = EC2E06AA290C3F0000318346 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EC2E06A8290C3F0000318346 /* crabby */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EC2E06A7290C3F0000318346 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ECAE2635290D3FDE00B27052 /* bubbleSound.wav in Resources */,
+				ECAE2627290C7D5200B27052 /* assets.xcassets in Resources */,
+				EC2E06B4290C3F0100318346 /* Preview Assets.xcassets in Resources */,
+				ECAE262B290C8B6500B27052 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EC2E06A5290C3F0000318346 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC2E06BB290C3F5B00318346 /* GameScene.swift in Sources */,
+				EC2E06AF290C3F0000318346 /* ContentView.swift in Sources */,
+				EC2E06BF290C420F00318346 /* GameView.swift in Sources */,
+				EC2E06AD290C3F0000318346 /* crabbyApp.swift in Sources */,
+				ECAE2631290C940400B27052 /* bolhas.swift in Sources */,
+				ECAE2637290D586300B27052 /* BubbleModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		EC2E06B5290C3F0100318346 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EC2E06B6290C3F0100318346 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EC2E06B8290C3F0100318346 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"crabby/Preview Content\"";
+				DEVELOPMENT_TEAM = 3MK6QXS2R9;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = natalia.albuquerque.crabby;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EC2E06B9290C3F0100318346 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"crabby/Preview Content\"";
+				DEVELOPMENT_TEAM = 3MK6QXS2R9;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = natalia.albuquerque.crabby;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EC2E06A4290C3F0000318346 /* Build configuration list for PBXProject "crabby" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC2E06B5290C3F0100318346 /* Debug */,
+				EC2E06B6290C3F0100318346 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EC2E06B7290C3F0100318346 /* Build configuration list for PBXNativeTarget "crabby" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC2E06B8290C3F0100318346 /* Debug */,
+				EC2E06B9290C3F0100318346 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EC2E06A1290C3F0000318346 /* Project object */;
+}
