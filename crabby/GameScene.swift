@@ -18,11 +18,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate{
     let background = SKSpriteNode(imageNamed: "BG")
     var possibleBubbles = ["bubble1", "bubble2", "bubble3", "bubble4", "bubble5", "bubble6", "bubble7", "bubble8", "bubble9", "bubble10"]
     var scoreLabel: SKLabelNode!
-    var score:Int = 0{
+    var score: Int = 0{
         didSet{
             scoreLabel.text = "\(score)"
         }
     }
+    
     var gameTimer: Timer!
     
     let crabCategory: UInt32 = 1
@@ -110,12 +111,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate{
         crab.physicsBody?.isDynamic = false
     }
     
-    func didBegin(_ contact: SKPhysicsContact) {
-        if contact.bodyA.categoryBitMask == crabCategory || contact.bodyB.categoryBitMask == crabCategory{
-            score += 1
-            scoreLabel.text = "\(score)"
-        }
-    }
+    
+    
+    //    func didBegin(_ contact: SKPhysicsContact) {
+    //        if contact.bodyA.categoryBitMask == crabCategory || contact.bodyB.categoryBitMask == crabCategory{
+    //            score += 1
+    //            scoreLabel.text = "\(score)"
+    //        }
+    //    }
     
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -129,42 +132,49 @@ class GameScene: SKScene, SKPhysicsContactDelegate{
         }
     }
     
+    let bubbleCategory: UInt32 = 0x1 << 1
+    let bubble2Category: UInt32 = 0x1 << 0
+    
+    func didBegin(_ contact: SKPhysicsContact) {
+        var firstBody: SKPhysicsBody
+        var secondBody: SKPhysicsBody
+        
+        if contact.bodyA.categoryBitMask < contact.bodyB.categoryBitMask{
+            firstBody = contact.bodyA
+            secondBody = contact.bodyB
+        } else {
+            firstBody = contact.bodyB
+            secondBody = contact.bodyA
+        }
+        
+        if (firstBody.categoryBitMask & bubbleCategory) != 0 && (secondBody.categoryBitMask & bubble2Category) != 0 {
+            crabDidCollideWithBubble(crabNode: firstBody.node as! SKSpriteNode, bubbleNode: secondBody.node as! SKSpriteNode)
+        }
+        
+        if contact.bodyA.categoryBitMask == crabCategory || contact.bodyB.categoryBitMask == crabCategory{
+            score += 1
+            scoreLabel.text = "\(score)"
+        }
+        
+    }
+    
+    func crabDidCollideWithBubble (crabNode: SKSpriteNode, bubbleNode: SKSpriteNode) {
+        let explosion = SKEmitterNode(fileNamed: "Explosion")!
+        explosion.position = bubbleNode.position
+        addChild(explosion)
+        
+        self.run(SKAction.playSoundFileNamed("bubbleSound.mp3", waitForCompletion: false))
+        crabNode.removeFromParent()
+        bubbleNode.removeFromParent()
+        
+        self.run(SKAction.wait(forDuration: 2)){
+            explosion.removeFromParent()
+        }
+        
+        score += 5 // NO MEU É DIFERENTE
+    }
     
 }
 
-// RASCUNHO!!!!!
-//    let bubbleCategory: UInt32 = 0x1 << 1
-//    let bubble2Category: UInt32 = 0x1 << 0
-//func didBegin(_ contact: SKPhysicsContact) {
-//            //        var firstBody: SKPhysicsBody
-//            //        var secondBody: SKPhysicsBody
-//            //
-//            //        if contact.bodyA.categoryBitMask < contact.bodyB.categoryBitMask{
-//            //            firstBody = contact.bodyA
-//            //            secondBody = contact.bodyB
-//            //        } else {
-//            //            firstBody = contact.bodyB
-//            //            secondBody = contact.bodyA
-//            //        }
-//            //        if (firstBody.categoryBitMask & bubbleCategory) != 0 && (secondBody.categoryBitMask & bubble2Category) != 0 {
-//            //            crabDidCollideWithBubble(crabNode: firstBody.node as! SKSpriteNode, bubbleNode: secondBody.node as! SKSpriteNode)
-//            //            }
-//            //        }
-//            //
-//            //            func crabDidCollideWithBubble (crabNode: SKSpriteNode, bubbleNode: SKSpriteNode) {
-//            //                let explosion = SKEmitterNode(fileNamed: "Explosion")!
-//            //                explosion.position = bubbleNode.position
-//            //                addChild(explosion)
-//            //
-//            //                self.run(SKAction.playSoundFileNamed("bubbleSound.wav", waitForCompletion: false))
-//            //
-//            //        //        crabNode.removeFromParent()
-//            //                bubbleNode.removeFromParent()
-//            //
-//            //                self.run(SKAction.wait(forDuration: 2)){
-//            //                    explosion.removeFromParent()
-//            //                }
-//            //
-//            //                score += 5 // NO MEU É DIFERENTE
-//        }
+
 
