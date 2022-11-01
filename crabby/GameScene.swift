@@ -193,7 +193,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate{
             secondBody = contact.bodyA
         }
         
-        if (firstBody.categoryBitMask & bolhaCategory) != 0 && (secondBody.categoryBitMask & bubble2Category) != 0 {
+        if (firstBody.categoryBitMask & bolhaCategory) != 0 && (secondBody.categoryBitMask & crabCategory) != 0 {
             crabDidCollideWithBubble(crabNode: firstBody.node as! SKSpriteNode, bubbleNode: secondBody.node as! SKSpriteNode)
         }
         
@@ -205,24 +205,28 @@ class GameScene: SKScene, SKPhysicsContactDelegate{
         if contact.bodyB.categoryBitMask == crabCategory {
             let touchedBubble = contact.bodyA
             updateScore(bubble: touchedBubble)
+            
         }
     }
     
     func updateScore(bubble: SKPhysicsBody) {
         //        print(bubble.node?.userData)
         guard let valueFromBubble: Int = bubble.node?.userData?.value(forKey: "value") as? Int else { return }
+        print(valueFromBubble)
         guard let operationFromBubble: Operations = bubble.node?.userData?.value(forKey: "operation") as? Operations else { return }
-        
+        let x = valueFromBubble
         switch operationFromBubble {
         case .sum:
-            score += valueFromBubble
+            score += x
         case .sub:
-            score -= valueFromBubble
+            score -= x
         case .mult:
-            score *= valueFromBubble
+            score *= x
         case .div:
-            score /= valueFromBubble
+            score /= x
+            
         }
+        
         scoreLabel.text = "\(score)"
     }
     
@@ -231,9 +235,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate{
         explosion.position = bubbleNode.position
         self.addChild(explosion)
         
-        self.run(SKAction.playSoundFileNamed("bubbleSound.mp3", waitForCompletion: false))
+        
+        
+        self.run(SKAction.playSoundFileNamed("bolha 1.wav", waitForCompletion: false))
         crabNode.removeFromParent()
-//                bubbleNode.removeFromParent()
         
         self.run(SKAction.wait(forDuration: 1)){
             explosion.removeFromParent()
