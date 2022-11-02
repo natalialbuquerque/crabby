@@ -25,8 +25,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate{
     
     var crab = SKSpriteNode(imageNamed: "crab")
     var retangleTop = SKSpriteNode(imageNamed: "RETANGULO")
-    var pause = SKSpriteNode(imageNamed: "PAUSA")
-    var goal = SKSpriteNode(imageNamed: "GOAL")
+    var pause = SKSpriteNode(imageNamed: "pausa2")
+    var goal = SKSpriteNode(imageNamed: "Goal 3")
     let background = SKSpriteNode(imageNamed: "BG")
     var newPossibleBubbles = [Bubble(value: 1, operation: .sum, spriteImg: "BubbleSoma-1"),
                               Bubble(value: 2, operation: .sum, spriteImg: "BubbleSoma-2"),
@@ -71,6 +71,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate{
             scoreLabel.text = "\(score)"
         }
     }
+    var goalLabel: SKLabelNode!
     
     var gameTimer: Timer!
     
@@ -102,8 +103,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate{
         pause.zPosition = 4
         addChild(pause)
         
-        goal.position = CGPoint(x: (size.width/7)*1.5, y: (size.height/7)*6)
-        goal.size = CGSize(width: 150.26*1.75, height: 150.26*1.5)
+        goal.position = CGPoint(x: (size.width/7)*1.65, y: (size.height/7)*6)
+        goal.size = CGSize(width: 150.26*2, height: 150.26*1.75)
         goal.zPosition = 4
         addChild(goal)
         
@@ -118,6 +119,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate{
         scoreLabel.fontColor = UIColor.white
         score = 0
         addChild(scoreLabel)
+        
+        goalLabel = SKLabelNode(text: "\(Int.random(in: 500...3000))")
+        goalLabel.position = CGPoint(x: size.width / 5, y: 1110)
+        goalLabel.zPosition = 5
+        goalLabel.fontName = "AmericanTypewriter-Bold"
+        goalLabel.fontSize = 48
+        goalLabel.fontColor = UIColor.white
+        addChild( goalLabel)
         
         gameTimer = Timer.scheduledTimer(timeInterval: 3.0, target: self, selector: #selector(addBubble), userInfo: nil, repeats: true)
     }
@@ -209,9 +218,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate{
         explosion.position = bubbleNode.position
         self.addChild(explosion)
         
-        self.run(SKAction.playSoundFileNamed("bubbleSound.mp3", waitForCompletion: false))
+        self.run(SKAction.playSoundFileNamed("bolha 3.wav", waitForCompletion: false))
         
-//        crabNode.removeFromParent()
+        //        crabNode.removeFromParent()
         bubbleNode.removeFromParent()
         
         
@@ -219,7 +228,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate{
             explosion.removeFromParent()
         }
     }
-  
+    
     func updateScore(bubble: SKPhysicsBody) {
         guard let valueFromBubble: Int = bubble.node?.userData?.value(forKey: "value") as? Int else { return }
         guard let operationFromBubble: Operations = bubble.node?.userData?.value(forKey: "operation") as? Operations else { return }

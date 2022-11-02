@@ -33,7 +33,7 @@ struct MusicSettings: View {
                         Slider(value: $sfxCount, in: CGFloat(0)...CGFloat(10))
                             .padding()
                             
-                    }
+                    }.frame(alignment: .center)
                 }
             }
         }
