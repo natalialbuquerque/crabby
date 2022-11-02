@@ -72,6 +72,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate{
         }
     }
     var goalLabel: SKLabelNode!
+    var goalInt: Int = 0 {
+        didSet{
+            goalLabel.text = "\(goalInt)"
+        }
+    }
+    
     
     var gameTimer: Timer!
     
@@ -100,6 +106,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate{
         
         pause.position = CGPoint(x: (size.width/7)*6, y: (size.height/7)*6)
         pause.size = CGSize(width: 90.5*1.75, height: 90*1.5)
+        pause.name = "pauseButton"
         pause.zPosition = 4
         addChild(pause)
         
@@ -120,12 +127,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate{
         score = 0
         addChild(scoreLabel)
         
-        goalLabel = SKLabelNode(text: "\(Int.random(in: 500...3000))")
+        goalLabel = SKLabelNode(text: "\(goalInt)")
         goalLabel.position = CGPoint(x: size.width / 5, y: 1110)
         goalLabel.zPosition = 5
         goalLabel.fontName = "AmericanTypewriter-Bold"
         goalLabel.fontSize = 48
         goalLabel.fontColor = UIColor.white
+        goalInt = Int.random(in: 500...3000)
         addChild( goalLabel)
         
         gameTimer = Timer.scheduledTimer(timeInterval: 3.0, target: self, selector: #selector(addBubble), userInfo: nil, repeats: true)
@@ -168,7 +176,18 @@ class GameScene: SKScene, SKPhysicsContactDelegate{
         crab.physicsBody?.categoryBitMask = crabScoreCategory
         crab.physicsBody?.collisionBitMask = bubbleScoreCategory
         crab.physicsBody?.isDynamic = false
+        
+        for touch in touches {
+             let location = touch.location(in: self)
+             let touchedNode = atPoint(location)
+             if touchedNode.name == "pauseButton" {
+                  // Call the function here.
+             }
+        }
+
     }
+    
+
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         for touch in touches {
@@ -209,8 +228,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate{
         if (firstBody.categoryBitMask & crabExplosionCategory) != 0 && (secondBody.categoryBitMask & bubbleExplosionCategory) != 0 {
             crabDidCollideWithBubble(crabNode: secondBody.node as! SKSpriteNode, bubbleNode: firstBody.node as! SKSpriteNode)
         }
-        
-        
     }
     
     func crabDidCollideWithBubble (crabNode: SKSpriteNode, bubbleNode: SKSpriteNode) {
@@ -243,7 +260,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate{
         case .div:
             score /= valueFromBubble
         }
+    
         scoreLabel.text = "\(score)"
+        
+        if score == goalInt{
+            print("foi")
+        }
+        
     }
 }
 

@@ -25,6 +25,7 @@
 		ECD8E02B291301F900DA3066 /* bolha 4.wav in Resources */ = {isa = PBXBuildFile; fileRef = ECD8E026291301F900DA3066 /* bolha 4.wav */; };
 		ECD8E02C291301F900DA3066 /* jogongueijo caranjogo.wav in Resources */ = {isa = PBXBuildFile; fileRef = ECD8E027291301F900DA3066 /* jogongueijo caranjogo.wav */; };
 		ECD8E02D291301F900DA3066 /* bolha 1.wav in Resources */ = {isa = PBXBuildFile; fileRef = ECD8E028291301F900DA3066 /* bolha 1.wav */; };
+		ECD8E02F29131FA400DA3066 /* ViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD8E02E29131FA400DA3066 /* ViewManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 		ECD8E026291301F900DA3066 /* bolha 4.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "bolha 4.wav"; sourceTree = "<group>"; };
 		ECD8E027291301F900DA3066 /* jogongueijo caranjogo.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "jogongueijo caranjogo.wav"; sourceTree = "<group>"; };
 		ECD8E028291301F900DA3066 /* bolha 1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "bolha 1.wav"; sourceTree = "<group>"; };
+		ECD8E02E29131FA400DA3066 /* ViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 		EC2E06A0290C3F0000318346 = {
 			isa = PBXGroup;
 			children = (
+				ECD8E02E29131FA400DA3066 /* ViewManager.swift */,
 				ECD8E0202912F9EA00DA3066 /* VictoryView.swift */,
 				ECD8E01E2912E6B500DA3066 /* MusicSettings.swift */,
 				ECAE2629290C8B6500B27052 /* Assets.xcassets */,
@@ -192,6 +195,7 @@
 				EC2E06BF290C420F00318346 /* GameView.swift in Sources */,
 				EC2E06AD290C3F0000318346 /* crabbyApp.swift in Sources */,
 				ECD8E01D2912E34E00DA3066 /* SettingsView.swift in Sources */,
+				ECD8E02F29131FA400DA3066 /* ViewManager.swift in Sources */,
 				ECD8E01F2912E6B500DA3066 /* MusicSettings.swift in Sources */,
 				ECAE2637290D586300B27052 /* BubbleModel.swift in Sources */,
 				ECD8E0212912F9EA00DA3066 /* VictoryView.swift in Sources */,
