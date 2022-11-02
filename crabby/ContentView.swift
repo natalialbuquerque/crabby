@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import SpriteKit
+//import SpriteKit
 
 struct ContentView: View {
     
