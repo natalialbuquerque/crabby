@@ -12,6 +12,8 @@ struct VictoryView: View {
         NavigationView{
             ZStack{
                 Image("victory")
+                    .resizable()
+                    .ignoresSafeArea(.all)
                 NavigationLink(
                     destination: ContentView().navigationBarBackButtonHidden(true),
                     label: {
