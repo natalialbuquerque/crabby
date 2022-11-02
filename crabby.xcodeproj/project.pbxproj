@@ -16,8 +16,9 @@
 		EC2E06BF290C420F00318346 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2E06BE290C420F00318346 /* GameView.swift */; };
 		ECAE2627290C7D5200B27052 /* assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECAE2626290C7D5200B27052 /* assets.xcassets */; };
 		ECAE262B290C8B6500B27052 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECAE2629290C8B6500B27052 /* Assets.xcassets */; };
-		ECAE2631290C940400B27052 /* bolhas.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECAE2630290C940400B27052 /* bolhas.swift */; };
 		ECAE2637290D586300B27052 /* BubbleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECAE2636290D586300B27052 /* BubbleModel.swift */; };
+		ECD8E01D2912E34E00DA3066 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD8E01C2912E34E00DA3066 /* SettingsView.swift */; };
+		ECD8E01F2912E6B500DA3066 /* MusicSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD8E01E2912E6B500DA3066 /* MusicSettings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,8 +32,9 @@
 		EC2E06BE290C420F00318346 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 		ECAE2626290C7D5200B27052 /* assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = assets.xcassets; sourceTree = "<group>"; };
 		ECAE2629290C8B6500B27052 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		ECAE2630290C940400B27052 /* bolhas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bolhas.swift; sourceTree = "<group>"; };
 		ECAE2636290D586300B27052 /* BubbleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleModel.swift; sourceTree = "<group>"; };
+		ECD8E01C2912E34E00DA3066 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		ECD8E01E2912E6B500DA3066 /* MusicSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicSettings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,7 +51,7 @@
 		EC2E06A0290C3F0000318346 = {
 			isa = PBXGroup;
 			children = (
-				ECAE2630290C940400B27052 /* bolhas.swift */,
+				ECD8E01E2912E6B500DA3066 /* MusicSettings.swift */,
 				ECAE2629290C8B6500B27052 /* Assets.xcassets */,
 				EC2E06AB290C3F0000318346 /* crabby */,
 				EC2E06AA290C3F0000318346 /* Products */,
@@ -67,6 +69,7 @@
 		EC2E06AB290C3F0000318346 /* crabby */ = {
 			isa = PBXGroup;
 			children = (
+				ECD8E01C2912E34E00DA3066 /* SettingsView.swift */,
 				EC2E06BE290C420F00318346 /* GameView.swift */,
 				EC2E06BA290C3F5B00318346 /* GameScene.swift */,
 				EC2E06AC290C3F0000318346 /* crabbyApp.swift */,
@@ -165,7 +168,8 @@
 				EC2E06AF290C3F0000318346 /* ContentView.swift in Sources */,
 				EC2E06BF290C420F00318346 /* GameView.swift in Sources */,
 				EC2E06AD290C3F0000318346 /* crabbyApp.swift in Sources */,
-				ECAE2631290C940400B27052 /* bolhas.swift in Sources */,
+				ECD8E01D2912E34E00DA3066 /* SettingsView.swift in Sources */,
+				ECD8E01F2912E6B500DA3066 /* MusicSettings.swift in Sources */,
 				ECAE2637290D586300B27052 /* BubbleModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
