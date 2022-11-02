@@ -176,6 +176,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate{
         var firstBody:SKPhysicsBody
         var secondBody:SKPhysicsBody
         
+        guard let _ = contact.bodyA.node else { return }
+        guard let _ = contact.bodyB.node else { return }
+        
         if contact.bodyA.categoryBitMask < contact.bodyB.categoryBitMask {
             firstBody = contact.bodyA
             secondBody = contact.bodyB
@@ -184,30 +187,32 @@ class GameScene: SKScene, SKPhysicsContactDelegate{
             secondBody = contact.bodyA
         }
         
-        if (firstBody.categoryBitMask & crabExplosionCategory) != 0 && (secondBody.categoryBitMask & bubbleExplosionCategory) != 0 {
-            crabDidCollideWithBubble(crabNode: firstBody.node as! SKSpriteNode, bubbleNode: secondBody.node as! SKSpriteNode)
-        }
-        
         if contact.bodyA.categoryBitMask == crabScoreCategory {
-            let touchedBubble = contact.bodyA
+            let touchedBubble = contact.bodyB
             updateScore(bubble: touchedBubble)
         }
         
         if contact.bodyB.categoryBitMask == crabScoreCategory {
-            let touchedBubble = contact.bodyB
+            let touchedBubble = contact.bodyA
             updateScore(bubble: touchedBubble)
         }
+        
+        if (firstBody.categoryBitMask & crabExplosionCategory) != 0 && (secondBody.categoryBitMask & bubbleExplosionCategory) != 0 {
+            crabDidCollideWithBubble(crabNode: secondBody.node as! SKSpriteNode, bubbleNode: firstBody.node as! SKSpriteNode)
+        }
+        
+        
     }
     
     func crabDidCollideWithBubble (crabNode: SKSpriteNode, bubbleNode: SKSpriteNode) {
         let explosion = SKEmitterNode(fileNamed: "Explosion")!
-        explosion.position = crabNode.position
+        explosion.position = bubbleNode.position
         self.addChild(explosion)
         
         self.run(SKAction.playSoundFileNamed("bubbleSound.mp3", waitForCompletion: false))
         
-        crabNode.removeFromParent()
-//        bubbleNode.removeFromParent()
+//        crabNode.removeFromParent()
+        bubbleNode.removeFromParent()
         
         
         self.run(SKAction.wait(forDuration: 1)){
@@ -216,7 +221,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate{
     }
   
     func updateScore(bubble: SKPhysicsBody) {
-        //        print(bubble.node?.userData)
         guard let valueFromBubble: Int = bubble.node?.userData?.value(forKey: "value") as? Int else { return }
         guard let operationFromBubble: Operations = bubble.node?.userData?.value(forKey: "operation") as? Operations else { return }
         
@@ -231,8 +235,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate{
             score /= valueFromBubble
         }
         scoreLabel.text = "\(score)"
-        
-        
     }
 }
 
