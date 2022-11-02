@@ -24,52 +24,46 @@ struct Bubble {
 class GameScene: SKScene, SKPhysicsContactDelegate{
     
     var crab = SKSpriteNode(imageNamed: "crab")
-    var retangleTop = SKSpriteNode(imageNamed: "bluerectangle")
-    var pause = SKSpriteNode(imageNamed: "pause")
-    var home = SKSpriteNode(imageNamed: "botaohome")
-    var placar = SKSpriteNode(imageNamed: "goal2")
+    var retangleTop = SKSpriteNode(imageNamed: "RETANGULO")
+    var pause = SKSpriteNode(imageNamed: "PAUSA")
+    var goal = SKSpriteNode(imageNamed: "GOAL")
     let background = SKSpriteNode(imageNamed: "BG")
-    var newPossibleBubbles = [Bubble(value: 1, operation: .sum, spriteImg: "bubble1sum"),
-                              Bubble(value: 2, operation: .sum, spriteImg: "bubble2sum"),
-                              Bubble(value: 3, operation: .sum, spriteImg: "bubble3sum"),
-                              Bubble(value: 4, operation: .sum, spriteImg: "bubble4sum"),
-                              Bubble(value: 5, operation: .sum, spriteImg: "bubble5sum"),
-                              Bubble(value: 6, operation: .sum, spriteImg: "bubble6sum"),
-                              Bubble(value: 7, operation: .sum, spriteImg: "bubble7sum"),
-                              Bubble(value: 8, operation: .sum, spriteImg: "bubble8sum"),
-                              Bubble(value: 9, operation: .sum, spriteImg: "bubble9sum"),
-                              Bubble(value: 10, operation: .sum, spriteImg: "bubble10sum"),
-                              Bubble(value: 1, operation: .sub, spriteImg: "bubble1sub"),
-                              Bubble(value: 2, operation: .sub, spriteImg: "bubble2sub"),
-                              Bubble(value: 3, operation: .sub, spriteImg: "bubble3sub"),
-                              Bubble(value: 4, operation: .sub, spriteImg: "bubble4sub"),
-                              Bubble(value: 5, operation: .sub, spriteImg: "bubble5sub"),
-                              Bubble(value: 6, operation: .sub, spriteImg: "bubble6sub"),
-                              Bubble(value: 7, operation: .sub, spriteImg: "bubble7sub"),
-                              Bubble(value: 8, operation: .sub, spriteImg: "bubble8sub"),
-                              Bubble(value: 9, operation: .sub, spriteImg: "bubble9sub"),
-                              Bubble(value: 10, operation: .sub, spriteImg: "bubble10sub"),
-                              Bubble(value: 0, operation: .mult, spriteImg: "bubble0mult"),
-                              Bubble(value: 1, operation: .mult, spriteImg: "bubble1mult"),
-                              Bubble(value: 2, operation: .mult, spriteImg: "bubble2mult"),
-                              Bubble(value: 3, operation: .mult, spriteImg: "bubble3mult"),
-                              Bubble(value: 4, operation: .mult, spriteImg: "bubble4mult"),
-                              Bubble(value: 5, operation: .mult, spriteImg: "bubble5mult"),
-                              Bubble(value: 6, operation: .mult, spriteImg: "bubble6mult"),
-                              Bubble(value: 7, operation: .mult, spriteImg: "bubble7mult"),
-                              Bubble(value: 8, operation: .mult, spriteImg: "bubble8mult"),
-                              Bubble(value: 9, operation: .mult, spriteImg: "bubble9mult"),
-                              Bubble(value: 10, operation: .mult, spriteImg: "bubble10mult"),
-                              Bubble(value: 1, operation: .div, spriteImg: "bubble1div"),
-                              Bubble(value: 2, operation: .div, spriteImg: "bubble2div"),
-                              Bubble(value: 3, operation: .div, spriteImg: "bubble3div"),
-                              Bubble(value: 4, operation: .div, spriteImg: "bubble4div"),
-                              Bubble(value: 5, operation: .div, spriteImg: "bubble5div"),
-                              Bubble(value: 6, operation: .div, spriteImg: "bubble6div"),
-                              Bubble(value: 7, operation: .div, spriteImg: "bubble7div"),
-                              Bubble(value: 8, operation: .div, spriteImg: "bubble8div"),
-                              Bubble(value: 9, operation: .div, spriteImg: "bubble9div"),
-                              Bubble(value: 10, operation: .div, spriteImg: "bubble10div"),]
+    var newPossibleBubbles = [Bubble(value: 1, operation: .sum, spriteImg: "BubbleSoma-1"),
+                              Bubble(value: 2, operation: .sum, spriteImg: "BubbleSoma-2"),
+                              Bubble(value: 3, operation: .sum, spriteImg: "BubbleSoma-3"),
+                              Bubble(value: 4, operation: .sum, spriteImg: "BubbleSoma-4"),
+                              Bubble(value: 5, operation: .sum, spriteImg: "BubbleSoma-5"),
+                              Bubble(value: 6, operation: .sum, spriteImg: "BubbleSoma-6"),
+                              Bubble(value: 7, operation: .sum, spriteImg: "BubbleSoma-7"),
+                              Bubble(value: 8, operation: .sum, spriteImg: "BubbleSoma-8"),
+                              Bubble(value: 9, operation: .sum, spriteImg: "BubbleSoma-9"),
+                              Bubble(value: 1, operation: .sub, spriteImg: "BubbleSubtração-1"),
+                              Bubble(value: 2, operation: .sub, spriteImg: "BubbleSubtração-2"),
+                              Bubble(value: 3, operation: .sub, spriteImg: "BubbleSubtração-3"),
+                              Bubble(value: 4, operation: .sub, spriteImg: "BubbleSubtração-4"),
+                              Bubble(value: 5, operation: .sub, spriteImg: "BubbleSubtração-5"),
+                              Bubble(value: 6, operation: .sub, spriteImg: "BubbleSubtração-6"),
+                              Bubble(value: 7, operation: .sub, spriteImg: "BubbleSubtração-7"),
+                              Bubble(value: 8, operation: .sub, spriteImg: "BubbleSubtração-8"),
+                              Bubble(value: 9, operation: .sub, spriteImg: "BubbleSubtração-9"),
+                              Bubble(value: 1, operation: .mult, spriteImg: "BubbleMultiplicação-1"),
+                              Bubble(value: 2, operation: .mult, spriteImg: "BubbleMultiplicação-2"),
+                              Bubble(value: 3, operation: .mult, spriteImg: "BubbleMultiplicação-3"),
+                              Bubble(value: 4, operation: .mult, spriteImg: "BubbleMultiplicação-4"),
+                              Bubble(value: 5, operation: .mult, spriteImg: "BubbleMultiplicação-5"),
+                              Bubble(value: 6, operation: .mult, spriteImg: "BubbleMultiplicação-6"),
+                              Bubble(value: 7, operation: .mult, spriteImg: "BubbleMultiplicação-7"),
+                              Bubble(value: 8, operation: .mult, spriteImg: "BubbleMultiplicação-8"),
+                              Bubble(value: 9, operation: .mult, spriteImg: "BubbleMultiplicação-9"),
+                              Bubble(value: 1, operation: .div, spriteImg: "BubbleDivisão-1"),
+                              Bubble(value: 2, operation: .div, spriteImg: "BubbleDivisão-2"),
+                              Bubble(value: 3, operation: .div, spriteImg: "BubbleDivisão-3"),
+                              Bubble(value: 4, operation: .div, spriteImg: "BubbleDivisão-4"),
+                              Bubble(value: 5, operation: .div, spriteImg: "BubbleDivisão-5"),
+                              Bubble(value: 6, operation: .div, spriteImg: "BubbleDivisão-6"),
+                              Bubble(value: 7, operation: .div, spriteImg: "BubbleDivisão-7"),
+                              Bubble(value: 8, operation: .div, spriteImg: "BubbleDivisão-8"),
+                              Bubble(value: 9, operation: .div, spriteImg: "BubbleDivisão-9"),]
     
     var scoreLabel: SKLabelNode!
     var score: Int = 0{
@@ -80,8 +74,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate{
     
     var gameTimer: Timer!
     
-    let crabCategory: UInt32 = 0x1 << 1
-    let bolhaCategory: UInt32 = 0x1 << 0
+    let crabScoreCategory: UInt32 = 0x1 << 1
+    let bubbleScoreCategory: UInt32 = 0x1 << 0
+    
+    let crabExplosionCategory: UInt32 = 0x1 << 0
+    let bubbleExplosionCategory: UInt32 = 0x1 << 1
     
     override func didMove(to view: SKView) {
         physicsWorld.contactDelegate = self
@@ -95,39 +92,34 @@ class GameScene: SKScene, SKPhysicsContactDelegate{
         crab.size = CGSize(width: 400, height: 226)
         addChild(crab)
         
-        retangleTop.position = CGPoint(x: size.width / 2, y: 1250)
-        retangleTop.size = CGSize(width: size.width, height: (size.width/5)*3)
+        retangleTop.position = CGPoint(x: size.width / 2, y: (size.height/7)*6)
+        retangleTop.size = CGSize(width: 225*1.5, height: 77*1.5)
         retangleTop.zPosition = 3
         addChild(retangleTop)
         
         pause.position = CGPoint(x: (size.width/7)*6, y: (size.height/7)*6)
-        pause.size = CGSize(width: 150, height: 150)
+        pause.size = CGSize(width: 90.5*1.75, height: 90*1.5)
         pause.zPosition = 4
         addChild(pause)
         
-        home.position = CGPoint(x: (size.width/7), y: (size.height/7)*6)
-        home.size = CGSize(width: 150, height: 150)
-        home.zPosition = 4
-        addChild(home)
-        
-        placar.position = CGPoint(x: size.width / 2, y: 1150)
-        placar.size = CGSize(width: 300, height: 190)
-        placar.zPosition = 4
-        addChild(placar)
+        goal.position = CGPoint(x: (size.width/7)*1.5, y: (size.height/7)*6)
+        goal.size = CGSize(width: 150.26*1.75, height: 150.26*1.5)
+        goal.zPosition = 4
+        addChild(goal)
         
         self.physicsWorld.gravity = CGVector(dx: 0, dy: 0)
         self.physicsWorld.contactDelegate = self
         
         scoreLabel = SKLabelNode(text: "\(0)")
-        scoreLabel.position = CGPoint(x: size.width / 2, y: 1150)
+        scoreLabel.position = CGPoint(x: size.width/2, y: 1110)
         scoreLabel.zPosition = 5
         scoreLabel.fontName = "AmericanTypewriter-Bold"
-        scoreLabel.fontSize = 36
-        scoreLabel.fontColor = UIColor.black
+        scoreLabel.fontSize = 64
+        scoreLabel.fontColor = UIColor.white
         score = 0
         addChild(scoreLabel)
         
-        gameTimer = Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: #selector(addBubble), userInfo: nil, repeats: true)
+        gameTimer = Timer.scheduledTimer(timeInterval: 3.0, target: self, selector: #selector(addBubble), userInfo: nil, repeats: true)
     }
     
     @objc func addBubble(){
@@ -145,10 +137,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate{
         bubble.size = CGSize(width: 150, height: 150)
         bubble.position = CGPoint(x: positon, y: size.height + bubble.size.height)
         
-        bubble.physicsBody = SKPhysicsBody(rectangleOf: bubble.size)
+        bubble.physicsBody = SKPhysicsBody(circleOfRadius: 150/2)
         bubble.physicsBody?.isDynamic = true
-        bubble.physicsBody?.categoryBitMask = bolhaCategory
-        bubble.physicsBody?.contactTestBitMask = crabCategory
+        bubble.physicsBody?.categoryBitMask = bubbleScoreCategory
+        bubble.physicsBody?.contactTestBitMask = crabScoreCategory
         
         addChild(bubble)
         
@@ -161,9 +153,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate{
         bubble.run(SKAction.sequence(actionArray))
     }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        crab.physicsBody = SKPhysicsBody(rectangleOf: crab.size)
-        crab.physicsBody?.categoryBitMask = crabCategory
-        crab.physicsBody?.collisionBitMask = bolhaCategory
+        let texture1 = SKTexture(imageNamed: "crab")
+        crab.texture = texture1
+        crab.physicsBody = SKPhysicsBody(texture: texture1, size: crab.size)
+        crab.physicsBody?.categoryBitMask = crabScoreCategory
+        crab.physicsBody?.collisionBitMask = bubbleScoreCategory
         crab.physicsBody?.isDynamic = false
     }
     
@@ -178,36 +172,49 @@ class GameScene: SKScene, SKPhysicsContactDelegate{
         }
     }
     
-    let bubbleCategory: UInt32 = 0x1 << 1
-    let bubble2Category: UInt32 = 0x1 << 0
-    
     func didBegin(_ contact: SKPhysicsContact) {
-        var firstBody: SKPhysicsBody
-        var secondBody: SKPhysicsBody
+        var firstBody:SKPhysicsBody
+        var secondBody:SKPhysicsBody
         
-        if contact.bodyA.categoryBitMask < contact.bodyB.categoryBitMask{
+        if contact.bodyA.categoryBitMask < contact.bodyB.categoryBitMask {
             firstBody = contact.bodyA
             secondBody = contact.bodyB
-        } else {
+        }else{
             firstBody = contact.bodyB
             secondBody = contact.bodyA
         }
         
-        if (firstBody.categoryBitMask & bolhaCategory) != 0 && (secondBody.categoryBitMask & bubble2Category) != 0 {
+        if (firstBody.categoryBitMask & crabExplosionCategory) != 0 && (secondBody.categoryBitMask & bubbleExplosionCategory) != 0 {
             crabDidCollideWithBubble(crabNode: firstBody.node as! SKSpriteNode, bubbleNode: secondBody.node as! SKSpriteNode)
         }
         
-        if contact.bodyA.categoryBitMask == crabCategory {
-            let touchedBubble = contact.bodyB
+        if contact.bodyA.categoryBitMask == crabScoreCategory {
+            let touchedBubble = contact.bodyA
             updateScore(bubble: touchedBubble)
         }
         
-        if contact.bodyB.categoryBitMask == crabCategory {
-            let touchedBubble = contact.bodyA
+        if contact.bodyB.categoryBitMask == crabScoreCategory {
+            let touchedBubble = contact.bodyB
             updateScore(bubble: touchedBubble)
         }
     }
     
+    func crabDidCollideWithBubble (crabNode: SKSpriteNode, bubbleNode: SKSpriteNode) {
+        let explosion = SKEmitterNode(fileNamed: "Explosion")!
+        explosion.position = crabNode.position
+        self.addChild(explosion)
+        
+        self.run(SKAction.playSoundFileNamed("bubbleSound.mp3", waitForCompletion: false))
+        
+        crabNode.removeFromParent()
+//        bubbleNode.removeFromParent()
+        
+        
+        self.run(SKAction.wait(forDuration: 1)){
+            explosion.removeFromParent()
+        }
+    }
+  
     func updateScore(bubble: SKPhysicsBody) {
         //        print(bubble.node?.userData)
         guard let valueFromBubble: Int = bubble.node?.userData?.value(forKey: "value") as? Int else { return }
@@ -224,22 +231,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate{
             score /= valueFromBubble
         }
         scoreLabel.text = "\(score)"
-    }
-    
-    func crabDidCollideWithBubble (crabNode: SKSpriteNode, bubbleNode: SKSpriteNode) {
-        let explosion = SKEmitterNode(fileNamed: "Explosion")!
-        explosion.position = bubbleNode.position
-        self.addChild(explosion)
         
-        self.run(SKAction.playSoundFileNamed("bubbleSound.mp3", waitForCompletion: false))
-        crabNode.removeFromParent()
-//                bubbleNode.removeFromParent()
         
-        self.run(SKAction.wait(forDuration: 1)){
-            explosion.removeFromParent()
-        }
     }
-    
 }
 
 
