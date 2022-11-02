@@ -13,32 +13,31 @@ struct ContentView: View {
     var body: some View {
         NavigationView{
             ZStack{
-                Image("fundo 4 1")
+                Image("Group 21")
                     .resizable()
                     .ignoresSafeArea()
+                    
                 VStack{
                     Image("CRAB 1")
-                    
+                        .padding(.top, -50)
                     VStack{
                         NavigationLink(
                             destination: GameView().navigationBarBackButtonHidden(true),
                             label: {
                                 Image("play")
+                                    .padding(.top, -50)
                             })
-                        ZStack{
-                            Image("duas nuvens 2")
-                            Image("settings")
-                                .padding()
-                            Image("mar")
-                            //                                .ignoresSafeArea()
-                            //                            Image("água")
-                            //                                .ignoresSafeArea()
-                        }
+                        NavigationLink(
+                            destination: SettingsView().navigationBarBackButtonHidden(true),
+                            label: {
+                                Image("settings")
+                                    
+                            })
+                        
                     }
+                    Spacer()
                 }
             }
-            //            .frame(width: 750, height: 1200, alignment: .center)
-            //            .background(.white)
         }
     }
 }

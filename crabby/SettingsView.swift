@@ -30,7 +30,7 @@ struct SettingsView: View {
                                     Image("settings")
                                 })
                 
-                        }
+                        }.frame(alignment: .center)
                         NavigationLink(
                             destination: GameView().navigationBarBackButtonHidden(true),
                             label: {

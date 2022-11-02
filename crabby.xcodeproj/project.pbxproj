@@ -19,6 +19,12 @@
 		ECAE2637290D586300B27052 /* BubbleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECAE2636290D586300B27052 /* BubbleModel.swift */; };
 		ECD8E01D2912E34E00DA3066 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD8E01C2912E34E00DA3066 /* SettingsView.swift */; };
 		ECD8E01F2912E6B500DA3066 /* MusicSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD8E01E2912E6B500DA3066 /* MusicSettings.swift */; };
+		ECD8E0212912F9EA00DA3066 /* VictoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD8E0202912F9EA00DA3066 /* VictoryView.swift */; };
+		ECD8E029291301F900DA3066 /* bolha 3.wav in Resources */ = {isa = PBXBuildFile; fileRef = ECD8E024291301F800DA3066 /* bolha 3.wav */; };
+		ECD8E02A291301F900DA3066 /* bolha 2.wav in Resources */ = {isa = PBXBuildFile; fileRef = ECD8E025291301F900DA3066 /* bolha 2.wav */; };
+		ECD8E02B291301F900DA3066 /* bolha 4.wav in Resources */ = {isa = PBXBuildFile; fileRef = ECD8E026291301F900DA3066 /* bolha 4.wav */; };
+		ECD8E02C291301F900DA3066 /* jogongueijo caranjogo.wav in Resources */ = {isa = PBXBuildFile; fileRef = ECD8E027291301F900DA3066 /* jogongueijo caranjogo.wav */; };
+		ECD8E02D291301F900DA3066 /* bolha 1.wav in Resources */ = {isa = PBXBuildFile; fileRef = ECD8E028291301F900DA3066 /* bolha 1.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +41,12 @@
 		ECAE2636290D586300B27052 /* BubbleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleModel.swift; sourceTree = "<group>"; };
 		ECD8E01C2912E34E00DA3066 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		ECD8E01E2912E6B500DA3066 /* MusicSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicSettings.swift; sourceTree = "<group>"; };
+		ECD8E0202912F9EA00DA3066 /* VictoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VictoryView.swift; sourceTree = "<group>"; };
+		ECD8E024291301F800DA3066 /* bolha 3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "bolha 3.wav"; sourceTree = "<group>"; };
+		ECD8E025291301F900DA3066 /* bolha 2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "bolha 2.wav"; sourceTree = "<group>"; };
+		ECD8E026291301F900DA3066 /* bolha 4.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "bolha 4.wav"; sourceTree = "<group>"; };
+		ECD8E027291301F900DA3066 /* jogongueijo caranjogo.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "jogongueijo caranjogo.wav"; sourceTree = "<group>"; };
+		ECD8E028291301F900DA3066 /* bolha 1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "bolha 1.wav"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +63,7 @@
 		EC2E06A0290C3F0000318346 = {
 			isa = PBXGroup;
 			children = (
+				ECD8E0202912F9EA00DA3066 /* VictoryView.swift */,
 				ECD8E01E2912E6B500DA3066 /* MusicSettings.swift */,
 				ECAE2629290C8B6500B27052 /* Assets.xcassets */,
 				EC2E06AB290C3F0000318346 /* crabby */,
@@ -75,6 +88,11 @@
 				EC2E06AC290C3F0000318346 /* crabbyApp.swift */,
 				EC2E06AE290C3F0000318346 /* ContentView.swift */,
 				ECAE2636290D586300B27052 /* BubbleModel.swift */,
+				ECD8E028291301F900DA3066 /* bolha 1.wav */,
+				ECD8E025291301F900DA3066 /* bolha 2.wav */,
+				ECD8E024291301F800DA3066 /* bolha 3.wav */,
+				ECD8E026291301F900DA3066 /* bolha 4.wav */,
+				ECD8E027291301F900DA3066 /* jogongueijo caranjogo.wav */,
 				EC239257290FFF6A0071F0C4 /* Explosion.sks */,
 				EC23925B2910097E0071F0C4 /* bubbleSound.mp3 */,
 				ECAE2626290C7D5200B27052 /* assets.xcassets */,
@@ -149,10 +167,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECD8E02D291301F900DA3066 /* bolha 1.wav in Resources */,
 				ECAE2627290C7D5200B27052 /* assets.xcassets in Resources */,
+				ECD8E02C291301F900DA3066 /* jogongueijo caranjogo.wav in Resources */,
+				ECD8E02B291301F900DA3066 /* bolha 4.wav in Resources */,
 				EC239258290FFF6A0071F0C4 /* Explosion.sks in Resources */,
 				EC2E06B4290C3F0100318346 /* Preview Assets.xcassets in Resources */,
 				EC23925C2910097E0071F0C4 /* bubbleSound.mp3 in Resources */,
+				ECD8E029291301F900DA3066 /* bolha 3.wav in Resources */,
+				ECD8E02A291301F900DA3066 /* bolha 2.wav in Resources */,
 				ECAE262B290C8B6500B27052 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -171,6 +194,7 @@
 				ECD8E01D2912E34E00DA3066 /* SettingsView.swift in Sources */,
 				ECD8E01F2912E6B500DA3066 /* MusicSettings.swift in Sources */,
 				ECAE2637290D586300B27052 /* BubbleModel.swift in Sources */,
+				ECD8E0212912F9EA00DA3066 /* VictoryView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
